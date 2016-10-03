@@ -1,4 +1,4 @@
-/* Copyright (c) 2014-2016, Nicolas Nytko <contrib1@example.net>, Liam Fruzyna <contrib2@example.net>
+/* Copyright (c) 2014-2016, Nicolas Nytko, Liam Fruzyna
  All rights reserved.
  ...
 
@@ -18,7 +18,6 @@
  The views and conclusions contained in the software and documentation are those of the authors
  and should not be interpreted as representing official policies, either expressed or implied, of the FreeBSD Project.
 */
-
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

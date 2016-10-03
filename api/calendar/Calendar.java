@@ -1,4 +1,4 @@
-/* Copyright (c) 2014-2016, Nicolas Nytko <contrib1@example.net>, Liam Fruzyna <contrib2@example.net>
+/* Copyright (c) 2014-2016, Nicolas Nytko, Liam Fruzyna
  All rights reserved.
  ...
 
