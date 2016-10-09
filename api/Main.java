@@ -51,6 +51,8 @@ public class Main {
             FileManagement.deleteExisting();
             System.out.println("Invalid Username/Password or District Code");
             System.exit(0);
+            System.in.read();
+            return;
         }
 
         try
@@ -69,12 +71,12 @@ public class Main {
         Element root = doc.getRootElement();
         Student user = new Student(root.getFirstChildElement("PortalOutline").getFirstChildElement("Family").getFirstChildElement("Student"), core.getDistrictInfo());
 
-        System.out.println(user.getInfoString());
+        print(user.getInfoString());
 
         URL gradesURL = new URL(core.getDistrictInfo().getDistrictBaseURL() + "/prism?&x=portal.PortalClassbook-getClassbookForAllSections&mode=classbook&personID=" + user.personID + "&structureID=" + user.calendars.get(0).schedules.get(0).id + "&calendarID=" + user.calendars.get(0).calendarID);
         Document doc2 = builder.build(new ByteArrayInputStream(core.getContent(gradesURL, false).getBytes()));
         ClassbookManager manager = new ClassbookManager(doc2.getRootElement().getFirstChildElement("SectionClassbooks"));
-        System.out.println(manager.getInfoString());
+        print(manager.getInfoString());
 
         out.close();
 
@@ -82,5 +84,10 @@ public class Main {
         System.out.println("Press any key to exit...");
 
         System.in.read();
+    }
+    public static void print(String s)
+    {
+        System.out.println(s);
+        out.println(s);
     }
 }
